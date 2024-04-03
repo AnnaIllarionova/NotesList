@@ -12,13 +12,23 @@
     },
     {
       "id": "3176",
-      "title": "deploy on Netlify",
+      "title": "deploy ",
       "completed": false
     },
     {
       "id": "fe4b",
       "title": "addapt to mobile",
       "completed": false
+    },
+    {
+      "id": "a035",
+      "title": "debug",
+      "completed": false
+    },
+    {
+      "id": "8a82",
+      "title": "relax",
+      "completed": true
     }
   ]
 }

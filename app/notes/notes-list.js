@@ -95,28 +95,27 @@ export const NotesFilter = ({
   isCompleted,
   isUncompleted,
 }) => {
+  useEffect(() => {
+    if (isCompleted) {
+      setFilteredArray(todos.filter((todo) => todo.completed === true));
+    } else if (isUncompleted) {
+      setFilteredArray(todos.filter((todo) => todo.completed === false));
+    }
+  }, [todos, isCompleted, isUncompleted]);
   const handleFilterCompleted = ({
-    todos,
-    setFilteredArray,
     setIsCompleted,
     isCompleted,
     setIsUncompleted,
   }) => {
-    const allTodos = todos.filter((todo) => todo.completed === true);
-    setFilteredArray(allTodos);
     setIsCompleted(!isCompleted);
     setIsUncompleted(false);
   };
 
   const handleFilterNotCompleted = ({
-    todos,
-    setFilteredArray,
     setIsCompleted,
     setIsUncompleted,
     isUncompleted,
   }) => {
-    const allTodos = todos.filter((todo) => todo.completed === false);
-    setFilteredArray(allTodos);
     setIsCompleted(false);
     setIsUncompleted(!isUncompleted);
   };
